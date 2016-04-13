@@ -1,0 +1,24 @@
+<html ng-app="exe">
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	
+</head>
+<body>
+	<div class= "container" ng-controller="dado">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Exercicio1</h1>
+			</div>
+			<div class="col-xs-12">
+				<input type="submit" value="SORTEAR" ng-click="embaralharCartas()" />
+			</div>
+			<div class="col-xs-3"  ng-repeat="dado in dados track by $index"  ng-show="dado.mostrar">
+				<img ng-src="{{dado.mostrar ? dado.caminho : dado.caminho}}"/>		
+			</div>
+		</div>
+	</div>
+			
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="provas.js"></script>
+</body>
+</html>
